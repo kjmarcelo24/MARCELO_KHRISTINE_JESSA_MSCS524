@@ -14,13 +14,10 @@ import java.util.regex.Pattern;
 
 /**
  *
- * @author cheadle
+ * @author cheadle_kj_marcelo
  */
 public class TimeFormatter {
 
-    /**
-     * @param args the command line arguments
-     */
     private Pattern pattern;
     private Matcher matcher;
 
@@ -74,13 +71,8 @@ public class TimeFormatter {
             seconds = secondsInt >= 10 ? "" + secondsInt : "0" + secondsInt;
             hour = hourInt >= 10 ? "" + hourInt : "0" + hourInt;
             String timeReplace = hour + ":" + minute + ":" + seconds;
-
             matcher.appendReplacement(s, timeReplace);
-
         }
-
-        System.out.println(s.toString());
-
         return matcher.find();
 
     }
